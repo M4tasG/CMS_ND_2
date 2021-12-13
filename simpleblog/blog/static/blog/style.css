@@ -23,9 +23,11 @@ html, body{
     width: 75%;
     padding: 1em;
 }
-.main a:first-of-type{
+.main a{
     text-decoration: none;
-    color: white;
+}
+.whitefix{
+    color: white !important;
 }
 
 .author{
