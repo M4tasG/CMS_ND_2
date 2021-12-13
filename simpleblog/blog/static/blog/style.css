@@ -1,0 +1,68 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #292929;
+    color: white;
+    height: 100%;
+}
+.container{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.container h1{
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+.container span{
+    color: #26c9ff;
+}
+.main{
+    width: 75%;
+    padding: 1em;
+}
+
+.author{
+    margin: 0;
+    padding: 0;
+    color: #26c9ff;
+}
+.date{
+    color: #b5b5b5;
+}
+.sidebar{
+    width: 25%;
+    background-color: #1c1c1c;
+    text-align: center;
+}
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button{
+    margin: 2em 0;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #26c9ff;
+    border-radius: 1em;
+    width: 50%;
+    padding: 1em;
+}
+.button:hover{
+    transition-duration: 0.5s;
+    background-color: #26c9ff;
+    color:#292929;
+}
+.read-more{
+    text-decoration: none;
+    color: #26c9ff;
+}
+.pagination{
+    margin-top: 5em;
+}
+.pagination a{
+    margin: 0 1em;
+}

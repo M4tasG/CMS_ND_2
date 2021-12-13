@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+    <title>SimpleBlog</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1><span>Simple</span>Blog</h1>
+            {% block main_content %}
+            {% endblock %}
+        </div>
+        <div class="sidebar">
+            <h1>Menu</h1>
+            <div class="sidebar-content">
+                <a class="button" href="#">My profile</a>
+                <a class="button" href="#">Create post</a>
+                <a class="button" href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

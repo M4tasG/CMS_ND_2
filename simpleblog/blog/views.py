@@ -11,5 +11,5 @@ class MainView(LoginRequiredMixin, ListView):
     paginate_by = 4
 
     def get_queryset(self):
-        queryset = Post.objects.filter(user=self.request.user).order_by('-created_at')
+        queryset = Post.objects.filter(author = self.request.user).order_by('-created_on')
         return queryset
