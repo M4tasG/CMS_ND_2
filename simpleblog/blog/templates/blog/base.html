@@ -12,20 +12,38 @@
     <title>SimpleBlog</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="body_bg">
         <div class="main">
             <h1><a href="{% url 'blog-main' %}"><span>Simple</span><span class="whitefix">Blog</span></a></h1>
             {% block main_content %}
             {% endblock %}
         </div>
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <h1>Menu</h1>
             <div class="sidebar-content">
                 <a class="button" href="{% url 'blog-profile' user.id %}">My profile</a>
                 <a class="button" href="{% url 'blog-post-new' %}">Create post</a>
                 <a class="button" href="{% url 'authentication-logout' %}">Logout</a>
+                <button class="button-cus" onclick="applyAnimatedBg()">Turn on animated main</button>
+                <button class="button-cus" onclick="applyAnimatedSidebar()">Turn on animated sidebar</button>
             </div>
         </div>
     </div>
+    <script src="{% static 'blog/script.js' %}"></script>
+    <script>
+        var element2 = document.getElementById("sidebar");
+
+        function applyAnimatedSidebar(){
+            var colors = ['green', 'blue', 'red', 'yellow', 'orange', 'purple', 'pink', 'brown', 'black', 'grey', 'white'];
+            var i = 0;
+            setInterval(function(){
+                element2.style.backgroundColor = colors[i];
+                i++;
+                if(i >= colors.length){
+                    i = 0;
+                }
+            }, 1000);
+        }
+    </script>
 </body>
 </html>
