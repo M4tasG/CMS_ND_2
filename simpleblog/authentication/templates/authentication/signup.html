@@ -1,0 +1,20 @@
+{% extends 'authentication/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="login">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <label><h2>Username:</h2></label>
+            {{ form.username }}
+            <label><h2>Password:</h2></label>
+            {{ form.password1 }}
+            <label><h2>Repeat password:</h2></label>
+            {{ form.password2 }}
+        </fieldset>
+        <button type='submit'>Submit</button>
+    </form>
+</div>
+<h2>Already have an account? <a href="{% url 'authentication-login' %}">Log in</a></h2>
+{% endblock %}
