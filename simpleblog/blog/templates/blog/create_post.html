@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block main_content %}
+<div class="post">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset>
+            <label><h2>Title:</h2></label>
+            {{ form.title }}
+            <label><h2>Content:</h2></label>
+            {{ form.body }}
+        </fieldset>
+        <button type="submit" class="button-cus">Submit</button>
+    </form>
+</div>
+{% endblock %}
