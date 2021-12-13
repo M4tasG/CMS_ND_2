@@ -3,6 +3,6 @@
 
 {% block content %}
     <div class="login">
-        <h2>You have logged out <a>Log back in</a></h2>
+        <h2>You have logged out <a href="{% url 'authentication-login' %}">Log back in</a></h2>
     </div>
 {% endblock %}
