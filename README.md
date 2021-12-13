@@ -2,6 +2,8 @@
 Simple blog created using Django backend
 
 ### Paleidimas
+## Kadangi projektą įkėliau su duomenų baze, superuseris admin turėtų egzistuoti
+## username: admin password: admin
 Šis projektas reikalauja kad būtų instaliuota Python 3.9 programavimimo kalba
 ir Django bibliotekos naujausia versija.
 Suinstaliavus Python programavimo kalbą, įdiekite Django biblioteką atsidarius komandinį langą:
