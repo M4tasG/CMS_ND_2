@@ -25,6 +25,7 @@ html, body{
 }
 
 .author{
+    text-decoration: none;
     margin: 0;
     padding: 0;
     color: #26c9ff;

@@ -4,7 +4,7 @@
 {% block main_content %}
 <div class="post">
     <h1 class="title">{{ post.title }}</h1>
-    <h2 class="author"><a href="{% url 'blog-profile' post.author.id%}">{{ post.author }}</a></h2>
+    <h2 class="author"><a href="{% url 'blog-profile' post.author.id%}" class="author">{{ post.author }}</a></h2>
     <p class="date">Posted on: {{ post.created_on }}</p>
     <p>{{ post.body}}</p>
 </div>
