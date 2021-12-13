@@ -21,8 +21,8 @@
         <div class="sidebar">
             <h1>Menu</h1>
             <div class="sidebar-content">
-                <a class="button" href="#">My profile</a>
-                <a class="button" href="#">Create post</a>
+                <a class="button" href="{% url 'blog-profile' user.id %}">My profile</a>
+                <a class="button" href="{% url 'blog-post-new' %}">Create post</a>
                 <a class="button" href="{% url 'authentication-logout' %}">Logout</a>
             </div>
         </div>
