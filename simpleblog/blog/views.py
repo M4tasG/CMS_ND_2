@@ -13,3 +13,7 @@ class MainView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         queryset = Post.objects.filter(author = self.request.user).order_by('-created_on')
         return queryset
+
+class PostDetailView(LoginRequiredMixin, DetailView):
+    template_name = 'blog/post.html'
+    model = Post
