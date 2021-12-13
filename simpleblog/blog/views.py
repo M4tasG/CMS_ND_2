@@ -18,3 +18,12 @@ class PostDetailView(LoginRequiredMixin, DetailView):
     template_name = 'blog/post.html'
     model = Post
 
+class CreatePostView(LoginRequiredMixin, CreateView):
+    template_name = 'blog/create_post.html'
+    model = Post
+    context_object_name = 'form'
+    fields = ['title', 'body']
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
