@@ -8,7 +8,7 @@ from .models import Post
 class MainView(LoginRequiredMixin, ListView):
     template_name = 'blog/main.html'
     context_object_name = 'posts'
-    paginate_by = 4
+    paginate_by = 3
 
     def get_queryset(self):
         queryset = Post.objects.filter(author = self.request.user).order_by('-created_on')
@@ -17,3 +17,4 @@ class MainView(LoginRequiredMixin, ListView):
 class PostDetailView(LoginRequiredMixin, DetailView):
     template_name = 'blog/post.html'
     model = Post
+
